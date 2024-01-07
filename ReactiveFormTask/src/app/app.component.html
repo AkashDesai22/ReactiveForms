@@ -1,0 +1,188 @@
+
+  <!-- Button To Show or Hide Form -->
+
+<button class="addUser" (click)="addUser()">Add User / Show Form </button>
+
+                        <!-- User Form -->
+
+<form [formGroup]="userForm" *ngIf="showForm">
+
+  <h1 class="formHeader">User Form</h1>
+
+
+  <div>
+    <label for="firstName" id="name">First Name : </label>
+    <input type="text" class="Name" formControlName="firstName" />
+    <div class="errorMessage">
+      <span class="showHint" *ngIf="!userForm.get('firstName')?.touched
+                && !userForm.get('firstName')?.errors?.['minlength']
+                && !userForm.get('firstName')?.errors?.['pattern']">Please Enter Your First Name</span>
+      <span *ngIf="userForm.get('firstName')?.errors?.['required']
+                && userForm.get('firstName')?.touched">First Name Is Required</span>
+      <span *ngIf="userForm.get('firstName')?.errors?.['pattern']">Enter Alphabets Only</span>
+      <span *ngIf="userForm.get('firstName')?.errors?.['minlength']
+                && !userForm.get('firstName')?.errors?.['pattern']">Name must Be atleast 2 Characters Long</span>
+    </div>
+  </div>
+
+  <div>
+    <label for="lastName" id="name">Last Name : </label>
+    <input type="text" class="Name" formControlName="lastName" />
+    <div class="errorMessage">
+      <span class="showHint" *ngIf="!userForm.get('lastName')?.touched
+      && !userForm.get('lastName')?.errors?.['minlength']
+      && !userForm.get('lastName')?.errors?.['pattern']">Please Enter Your Last Name</span>
+      <span *ngIf="userForm.get('lastName')?.errors?.['required']
+                && userForm.get('lastName')?.touched">Last Name Is Required</span>
+      <span *ngIf="userForm.get('lastName')?.errors?.['pattern']">Enter Alphabets Only</span>
+      <span *ngIf="userForm.get('lastName')?.errors?.['minlength']
+                && !userForm.get('lastName')?.errors?.['pattern']">Name must Be atleast 2 Characters Long</span>
+    </div>
+  </div>
+
+  <div>
+    <label for="Email" id="emailId">Email : &nbsp;&nbsp;</label>
+    <input type="text" id="email" formControlName="email" />
+    <div class="errorMessage">
+      <span class="showHint" *ngIf="!userForm.get('email')?.touched
+      && !userForm.get('email')?.errors?.['pattern']">Please Enter Your Email</span>
+      <span *ngIf="userForm.get('email')?.errors?.['required']
+                && userForm.get('email')?.touched">Email Is Required</span>
+      <span *ngIf="userForm.get('email')?.errors?.['pattern']">Please Enter Correct Email Id</span>
+    </div>
+  </div>
+
+
+  <div>
+    <label for="phone" id="phoneName">Phone : </label>
+    <input type="text" id="phone" formControlName="phone" maxlength="10" />
+    <div class="errorMessage">
+      <span class="showHint" *ngIf="!userForm.get('phone')?.touched
+      && !userForm.get('phone')?.errors?.['minlength']
+      && !userForm.get('phone')?.errors?.['pattern']">Please Enter Your Phone Number</span>
+      <span *ngIf="userForm.get('phone')?.errors?.['required']
+                && userForm.get('phone')?.touched">Phone Number Is Required</span>
+      <span *ngIf="userForm.get('phone')?.errors?.['pattern']">Please Enter Correct Number</span>
+    </div>
+  </div>
+
+
+  <div>
+    <label for="company" id="compnyName">Company: </label>
+    <input type="text" id="company" formControlName="company" />
+    <div class="errorMessage">
+      <span class="showHint" *ngIf="!userForm.get('company')?.touched
+      && !userForm.get('company')?.errors?.['minlength']
+      && !userForm.get('company')?.errors?.['pattern']">Please Enter Your Company Name</span>
+      <span *ngIf="userForm.get('company')?.errors?.['required']
+                && userForm.get('company')?.touched">Company Name Is Required</span>
+      <span *ngIf="userForm.get('company')?.errors?.['minlength']">Company Name must Be atleast 2 Characters Long</span>
+    </div>
+  </div>
+
+
+  <div id="genderId">
+    <label for="gender" id="gender">Gender :</label>
+    <input type="radio" id="genderMale" name="gender" value="male" formControlName="gender">
+    <label for="gender">Male</label>
+    <input type="radio" name="gender" value="female" formControlName="gender">
+    <label for="gender">Female</label>
+    <div class="showHint">
+      <span id="showHintGender" *ngIf="!userForm.get('gender')?.touched
+                && !userForm.get('gender')?.dirty">Please Select Your Gender</span>
+    </div>
+  </div>
+
+
+  <div id="birthDayId">
+    <label for="birthday" id="birthdayHead">Birthday Date : </label>
+    <input type="date" id="birthDate" formControlName="birthDate" value="birthDate">
+    <div class="showHint">
+      <span id="showHintBirthDate" *ngIf="!userForm.get('birthDate')?.touched
+                && !userForm.get('birthDate')?.dirty">Please Select Your Birth Date</span>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password : </label>
+    <input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" id="password"
+      placeholder=" eg: Abc@123" formControlName="password" autocomplete="off">
+    <button class="showHideBtn" (click)="showPass()">Show</button>
+    <div class="errorMessage">
+      <span class="showHint" *ngIf="!userForm.get('password')?.touched
+                && !userForm.get('password')?.errors?.['pattern']">Please Enter Your Password</span>
+      <span *ngIf="userForm.get('password')?.errors?.['required']
+                && userForm.get('password')?.touched">Password is Required</span>
+      <span *ngIf="userForm.get('password')?.errors?.['pattern']"> Enter Correct Passowd eg: Abc@123 & Minimum 7
+        Characters</span>
+    </div>
+  </div>
+
+
+  <div>
+    <label for="confirmPassword"> Confirm Password : </label>
+    <input type="{{ showPassword ? 'text' : 'password'}}" id="confirmPassword" formControlName="confirmPassword" autocomplete="off">
+    <button class="showHideBtn" (click)="showPass()">Show</button>
+    <div class="errorMessage">
+      <span *ngIf="userForm.get('confirmPassword')?.errors?.['mismatch']">Password Not Matched</span>
+      <span class="showHint" *ngIf="!userForm.get('confirmPassword')?.touched
+                  && !userForm.get('confirmPassword')?.errors?.['mismatch']">Please Confirm Your Password</span>
+      <span *ngIf="userForm.get('confirmPassword')?.errors?.['required']">Please Confirm Your Password</span>
+    </div>
+  </div>
+
+
+
+
+  <br>
+  <button class="Registerbutton" [disabled]="!userForm.valid" (click)="register()">Register</button>
+  <button class="Cancelbutton" (click)="cancel()">Cancel</button>
+
+</form>
+
+<div class="userHead">
+
+  <h1 class="userDetail">User Details</h1>
+
+
+  <input class="searchData" type="search" placeholder="Serach User Details Here...." [(ngModel)]="serachTextValue">
+  <button class="searchBtn" (click)="searchData()">Search</button>
+
+</div>
+
+
+<!-- Table To Show User Details -->
+
+<ng-container *ngIf="(getUserData | search : searchText) as result">
+
+  <table>
+
+    <tr class="tableHead" *ngIf="result.length>0">
+      <th> First Name </th>
+      <th> Last Name </th>
+      <th> Email </th>
+      <th> Phone </th>
+      <th> Company </th>
+      <th> Edit </th>
+      <th>  Delit </th>
+    </tr>
+   
+    <tr *ngFor="let userData of result | search : searchText">
+      <td> {{userData.FirstName}} </td>
+      <td> {{userData.LastName}} </td>
+      <td> {{userData.Email}} </td>
+      <td> {{userData.Phone}} </td>
+      <td> {{userData.Company}} </td>
+      <td>
+        <button class="editButton" (click)="editRecord(userData.id)">Edit</button>
+      </td>
+      <td><button class="deleteButton" (click)="delitRecord(userData.id)">Delete</button></td>
+    </tr>
+  </table>
+<div class="noResultDiv">
+  <span class="noResultMessage" *ngIf="result.length===0">Sorry...No Data Found for the User You Looking For...{{'😢'}} </span>
+</div>
+</ng-container>
+
+
+

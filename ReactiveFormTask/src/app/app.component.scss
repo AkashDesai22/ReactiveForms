@@ -1,0 +1,349 @@
+.addUser {
+    margin-left: 25px;
+    width: 240px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(228, 194, 194);
+    color: black;
+    font-size: 19px;
+    font-family: fangsong;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5%;
+};
+
+
+.formHeader {
+    margin-left: 5%;
+    margin-top: 10px;
+    font-family: emoji;
+    font-size: 40px;
+};
+
+
+form {
+    margin-left: 30%;
+    border: 1px solid black;
+    padding: 20px 20px 20px 20px;
+    width: 500px;
+    background: #e7dae9;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: serif;
+    margin-bottom: 10%;
+
+};
+
+
+
+#name {
+    margin-left: -35px;
+};
+
+.Name {
+    height: 22px;
+    width: 220px;
+    margin-top: 8px;
+    margin-left: 45px;
+
+};
+
+
+
+.showHint {
+    color: green;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family: emoji;
+
+};
+
+.errorMessage {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    font-family: emoji;
+};
+
+
+
+#emailId {
+    margin-left: -40px;
+
+};
+
+
+
+#phoneName {
+    margin-left: -40px;
+
+};
+
+
+
+#email,
+#phone {
+    height: 22px;
+    width: 220px;
+    margin-left: 70px;
+    margin-top: 5px;
+
+};
+
+
+
+#compnyName {
+    margin-left: -50px;
+
+};
+
+
+
+#company {
+    height: 22px;
+    width: 220px;
+    margin-left: 65px;
+    margin-top: 5px;
+
+};
+
+
+
+
+#genderId {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+};
+
+
+
+#gender {
+    margin-left: -150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+};
+
+
+
+#genderMale {
+    margin-left: 75px;
+
+};
+
+
+#showHintGender {
+    color: green;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 42px;
+    font-family: emoji;
+
+};
+
+
+
+#birthDayId {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+};
+
+
+
+#birthDate {
+
+    height: 25px;
+    width: 175px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+    margin-left: 33px;
+};
+
+
+
+#birthdayHead {
+    margin-left: -55px;
+};
+
+#showHintBirthDate {
+
+    color: green;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 65px;
+    font-family: emoji;
+
+};
+
+
+
+#password {
+    height: 22px;
+    width: 220px;
+    margin-top: 8px;
+    margin-left: 60px;
+
+};
+
+
+
+#confirmPassword {
+
+    height: 22px;
+    width: 220px;
+    margin-top: 8px;
+
+
+};
+
+.showHideBtn {
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 25px;
+    margin-left: 2px;
+    background-color: burlywood;
+};
+
+
+
+.Registerbutton {
+    margin-left: 85px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: black;
+    font-size: 19px;
+    font-family: fangsong;
+    font-weight: bold;
+
+
+};
+
+
+
+.Cancelbutton {
+    margin-left: 25px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: black;
+    font-size: 19px;
+    font-family: fangsong;
+    font-weight: bold;
+
+
+};
+
+.userHead{
+
+background-color: blueviolet;
+height: 50px;
+width: 100%;
+margin-bottom: 2%;
+
+};
+
+.userDetail{
+    padding-top: 10px;
+    padding-left: 350px;
+    font-size: 35px;
+    font-family: emoji;
+    color: white;
+
+};
+
+.searchData{
+    color:black;
+    position: absolute;
+    margin-top: -50px;
+    height: 35px;
+    width: 445px;
+    margin-left: 535px;
+    padding-left: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: math;
+};
+
+.searchBtn{
+    position: absolute;
+    margin-top: -51px;
+    margin-left: 978px;
+    width: 130px;
+    height: 37px;
+    border: 1 px solid black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: cursive;
+};
+
+table {
+    border-collapse: collapse;
+    margin-left: 8%;
+    width: 1150px;
+  };
+
+  .tableHead{
+    background-color: rgb(151, 18, 18);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+   
+  };
+
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    justify-content: center;
+    
+  };
+
+  .editButton{
+    background-color: #4ae54a;
+    color: #0a0000;
+    width: 75px;
+    height: 36px;
+    margin-right: -23px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: bold;
+
+  };
+
+.deleteButton{
+    background-color: #f16191;
+    color: #0a0000;
+    width: 75px;
+    height: 36px;
+    margin-right: -23px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: bold;
+
+};
+
+.noResultDiv{
+    margin-top: 75px;
+
+};
+
+.noResultMessage{
+    background-color: #ddaaaa;
+    margin-left: 350px;
+    font-family: cursive;
+    font-size: 28px;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 30px;
+};

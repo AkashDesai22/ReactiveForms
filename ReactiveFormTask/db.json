@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "FirstName": "Akhil",
+      "LastName": "Kumar",
+      "Email": "akhil@gmail.com",
+      "Phone": "9959479459",
+      "Company": "BuzzBoard",
+      "Gender": "male",
+      "BirthDate": "1991-03-14",
+      "Password": "Akhil@123",
+      "ConfirmPassword": "Akhil@123",
+      "id": 1
+    },
+    {
+      "FirstName": "Rahul",
+      "LastName": "Dev",
+      "Email": "rahul@gmail.com",
+      "Phone": "8923193993",
+      "Company": "Infosys",
+      "Gender": "male",
+      "BirthDate": "1990-07-09",
+      "Password": "Rahul@123",
+      "ConfirmPassword": "Rahul@123",
+      "id": 2
+    },
+    {
+      "FirstName": "Sampath",
+      "LastName": "Kumar",
+      "Email": "sam@gmail.com",
+      "Phone": "9703037744",
+      "Company": "Cognizant",
+      "Gender": "male",
+      "BirthDate": "1989-06-27",
+      "Password": "Sampath@123",
+      "ConfirmPassword": "Sampath@123",
+      "id": 3
+    },
+    {
+      "FirstName": "Aniket",
+      "LastName": "Patil",
+      "Email": "aniket@gmail.com",
+      "Phone": "1234546789",
+      "Company": "TCS",
+      "Gender": "male",
+      "BirthDate": "1996-12-11",
+      "Password": "Aniket@123",
+      "ConfirmPassword": "Aniket@123",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
